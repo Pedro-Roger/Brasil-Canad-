@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --dark:	#000000;
+    --green:#006400;
+    --red:	#DC143C;
+    --white: #fff;
+    --yellow: #FFFF00;
+}
+body{
+    color: var(--dark);
+    background-image: url(/info_img/mulher-segurando-bandeira-brasileira-plano-completo\ \(1\).jpg);
+    
+  
+    
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    background-image: url(/index_img/praia.png); /* Caminho da imagem de fundo */
+    width: 100%;
+    transition: all 0.5s;
+    position:relative;
+    opacity: 1;
+
+}
+.navigation .logo img{
+    width: 100px; /* largura desejada */
+    height: auto; /* mantém a proporção */
+    margin-left: 20px;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.navigation ul li a{
+    color: #948f8f;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.navigation ul li a:hover{
+    color: #006400;
+}
+.sub-menu-1 {
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    background-color: #fbe7b5;
+    margin-top: 15px;
+    margin-left: -10px;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+    width: 150px; /* largura fixa */
+    overflow: hidden; /* esconder conteúdo fora do limite do elemento pai */
+}
+
+nav ul li:hover .sub-menu-1, .sub-menu-1:hover {
+    opacity: 1;
+}
+
+nav ul li:hover .sub-menu-1 ul, .sub-menu-1:hover .sub-menu-1 ul {
+    display: block;
+}
+
+nav ul li:hover .sub-menu-1 ul li, .sub-menu-1:hover .sub-menu-1 ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.sub-menu-2 {
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    background-color: #fbe7b5;
+    margin-top: 15px;
+    margin-right: 0px;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+    width: 150px; /* largura fixa */
+    overflow: hidden; /* esconder conteúdo fora do limite do elemento pai */
+}
+
+.sub-menu-2 ul li:first-child {
+    margin-left: -20px;
+}
+
+nav ul li:hover .sub-menu-2, .sub-menu-1:hover {
+    opacity: 1;
+}
+
+nav ul li:hover .sub-menu-2 ul, .sub-menu-2:hover .sub-menu-2 ul {
+    display: block;
+}
+
+nav ul li:hover .sub-menu-2 ul li, .sub-menu-2:hover .sub-menu-2 ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu {
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+
+
+
+.info {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: aliceblue;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+footer {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    margin-top: -20px; /* Adicione uma margem superior para recuar o footer */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2.patro {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.patrocinadores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.patrocinadores img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+        z-index: 1000;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 10px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 100%;
+        
+    }
+    
+}
+
+
+
+

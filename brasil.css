@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --dark:	#000000;
+    --green:#006400;
+    --red:	#DC143C;
+    --white: #fff;
+    --yellow: #FFFF00;
+}
+body{
+    color: var(--dark);
+    
+    
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    background-image: url(/index_img/praia.png); /* Caminho da imagem de fundo */
+    width: 100%;
+    transition: all 0.5s;
+    position:relative;
+    opacity: 1;
+
+}
+.navigation .logo img{
+    width: 100px; /* largura desejada */
+    height: auto; /* mantém a proporção */
+    margin-left: 50px;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.navigation ul li a{
+    color: #948f8f;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.navigation ul li a:hover{
+    color: #006400;
+}
+.sub-menu-1 {
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    background-color: #fbe7b5;
+    margin-top: 15px;
+    margin-left: -10px;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+    width: 150px; /* largura fixa */
+    overflow: hidden; /* esconder conteúdo fora do limite do elemento pai */
+}
+
+nav ul li:hover .sub-menu-1, .sub-menu-1:hover {
+    opacity: 1;
+}
+
+nav ul li:hover .sub-menu-1 ul, .sub-menu-1:hover .sub-menu-1 ul {
+    display: block;
+}
+
+nav ul li:hover .sub-menu-1 ul li, .sub-menu-1:hover .sub-menu-1 ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.sub-menu-2 {
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    background-color: #fbe7b5;
+    margin-top: 15px;
+    margin-right: 0px;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+    width: 150px; /* largura fixa */
+    overflow: hidden; /* esconder conteúdo fora do limite do elemento pai */
+}
+
+.sub-menu-2 ul li:first-child {
+    margin-left: -20px;
+}
+
+nav ul li:hover .sub-menu-2, .sub-menu-1:hover {
+    opacity: 1;
+}
+
+nav ul li:hover .sub-menu-2 ul, .sub-menu-2:hover .sub-menu-2 ul {
+    display: block;
+}
+
+nav ul li:hover .sub-menu-2 ul li, .sub-menu-2:hover .sub-menu-2 ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu {
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+
+.informacoes {
+    text-align: center;
+    background-color: #58fafa;
+    margin-top: -20px;
+}
+.titulo {
+    color: #ffffff;
+   
+    
+}
+.texto-container-informacoes{
+    
+    max-width: 1000px; /* ou qualquer outra largura máxima desejada */
+    margin: 0 auto;
+    padding: 20px; /* ajuste conforme necessário */
+    
+
+}
+
+.texto-justificado-informacoes {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/*/ section brasil/*/
+
+
+.brasil {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Define a altura da seção como 100% da altura da viewport */
+    overflow: hidden;
+    position: relative; /* Adicione position: relative; */
+    z-index: 1; /* Adicione um z-index maior para a seção brasil */
+    
+}
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona o vídeo para cobrir todo o espaço da seção */
+    z-index: -1; /* Garante que o vídeo fique atrás do conteúdo */
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container img {
+    max-width: 80%;
+    height: auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/brasil_img/flor.jpg);
+    background-size: cover;
+    flex-wrap: wrap;
+    
+    
+}
+
+.card {
+    width: calc(20% - 40px); /* 20% menos a margem */
+    padding: 20px;
+    margin: 20px 0; /* margem superior e inferior de 20px */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box; /* Inclua a margem e o preenchimento no cálculo da largura */
+
+    /* Adicionando transição suave */
+    transition: all 0.3s;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.card-norte {
+    background-color: #8cbb27; /* Verde */
+}
+
+.card-nordeste {
+    background-color: #4eb5db; /* Azul */
+}
+
+.card-centro-oeste {
+    background-color: #f5b015; /* Amarelo */
+}
+
+.card-sudeste {
+    background-color: #ff7b00; /* Laranja */
+}
+
+.card-sul {
+    background-color: #db2021; /* Vermelho */
+}
+
+/*/ sections regiões /*/
+
+.norte {
+  text-align: center;
+  background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+  margin-top: -20px;
+  background-color: #05ff05;
+  
+}
+
+.nordeste {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+    margin-top: -20px;
+    background-color: #4eb5db;
+    
+    
+}
+
+.centro-oeste {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+    margin-top: -20px;
+    background-color: #f5b015;
+   
+}
+
+.sudeste {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+    margin-top: -20px;
+    background-color: #ff7b00;
+    
+}
+
+.sul {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+    margin-top: -20px;
+    background-color: #DC143C;
+    
+}
+
+.imagem-centralizada {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4)); /* Aplica uma sombra somente na imagem */
+  }
+
+.texto-container {
+    max-width: 800px; /* ou qualquer outra largura máxima desejada */
+    margin: 0 auto;
+    padding: 20px; /* ajuste conforme necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* cor de fundo com opacidade */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* sombra com opacidade */
+  }
+  
+  .texto-justificado {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .section-title {
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+footer {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.patrocinadores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.patrocinadores img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        z-index: 1; /* Certifique-se de que os cards têm um z-index maior que a seção norte */
+        position: relative; /* Certifique-se de que os cards têm uma posição relativa */
+    }
+
+    .card {
+        width: calc(80% - 40px); /* Reduza a largura dos cards para caber melhor em dispositivos móveis */
+        margin: 20px 0;
+        z-index: 1; /* Certifique-se de que os cards têm um z-index maior que a seção norte */
+        position: relative; /* Certifique-se de que os cards têm uma posição relativa */
+    }
+
+    .norte {
+        z-index: 0; /* Defina o z-index da seção norte de volta para 0 */
+        position: static; /* Defina a posição de volta para estática */
+    }
+    
+    .brasil .container img {
+        max-width: 100%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção */
+        margin-top: 20px; /* Aumenta a margem superior */
+    }
+    
+    footer {
+        position: relative; /* Define a posição do rodapé como relativa */
+        z-index: 0; /* Redefine o índice de sobreposição para evitar que fique sobre as seções */
+    }
+
+    .navigation{
+        padding: 18px 20px;
+        z-index: 1000;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 10px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+        
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+        
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img img {
+        width: 70%;
+        max-width: none;
+        height: auto;
+        margin-top: -100px;
+        margin-bottom: 80px;
+      
+    }
+   
+    
+
+}
